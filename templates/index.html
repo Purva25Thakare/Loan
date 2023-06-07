@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction</title>
+    <head>
+        <style>
+           body {
+            background-image: url('https://navi.com/blog/wp-content/uploads/2022/07/personal-loan-on-aadhaar-card.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;;
+           }
+        </style>
+</head>
+<body>
+    <h1> Loan Approval </h1>
+    <form method="GET" action ="/predict_loan_status">
+    
+        <label><b>Credit_Policy</b></label>
+        <input type = "text" name = "credit_policy">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Int_Rate</b></label>
+        <input type = "text" name = "int_rate">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Installment</b></label>
+        <input type = "text" name = "installment">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Log_Annual_Inc</b></label>
+        <input type = "text" name = "log_annual_inc">
+        </select>
+        <br>
+        <br>
+
+        <label><b>DTI</b></label>
+        <input type = "text" name = "dti">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Fico</b></label>
+        <input type = "text" name = "fico">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Days_with_Cr_line</b></label>
+        <input type = "text" name = "days_with_cr_line">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Revol_Bal</b></label>
+        <input type = "text" name = "revol_bal">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Revol_Util</b></label>
+        <input type = "text" name = "revol_util">
+        </select>
+        <br>
+        <br>
+
+        
+        <label><b>Inq_last_6_months</b></label>
+        <input type = "text" name = "inq_last_6mths">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Delinq_2yrs</b></label>
+        <input type = "text" name = "delinq_2yrs">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Pub_Rec</b></label>
+        <input type = "text" name = "pub_rec">
+        </select>
+        <br>
+        <br>
+
+        <label><b>Purpose:</b></label>
+        <select name="purpose">
+            <option value="all_other">All-Other</option>
+            <option value="credit_card">Credit-Card</option>
+            <option value="debt_consolidation">Debt-Consolidation</option>
+            <option value="educational ">Educational</option>
+            <option value="home_improvement">Home-Improvement</option>
+            <option value="major_purchase">Major-Purchase</option>
+            <option value="small_business">Small-Business</option>
+            
+        </select>
+
+
+        <br>
+        <br>
+
+        <input type = "submit" value = "SUBMIT">
+
+        <br>
+            <p> <b> {{ prediction }} </b> </p>
+
+        </form>
+    
+
+
+</body>
+
+
+</html>
